@@ -4,8 +4,8 @@
 ## functional requirements -- --
 
 - [X] it must hear your voice
-- [] it must understand your voice
-- [] it must speak your language 
+- [X] it must understand your voice
+- [X] it must speak your language 
 - [X] it must speak to you
 - [] it must do what you command
 
@@ -15,4 +15,4 @@
 
 ## non functional requirements -- --
 
-- [] it must not do any command you want to do, only what is scripted (for security reasons)
+- [] it must not do every command you want to do, only what is scripted (for security reasons)

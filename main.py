@@ -2,6 +2,7 @@ from vosk import Model, KaldiRecognizer
 import pyaudio
 import pyttsx3
 import json
+import core
 
 # Speech Synthesis
 
@@ -29,8 +30,9 @@ while True:
         result = rec.Result()
         result = json.loads(result)
 
-        if result is not None:
-            text = result['text']
+        text = result['text']
 
-            print(text)
-            speak(text)
+        print(text)
+        
+        if text == 'que horas são' or text == 'me diga as horas':
+            speak(core.SystemInfo.get_time())
