@@ -6,7 +6,7 @@
 - [X] it must hear your voice
 - [] it must understand your voice
 - [] it must speak your language 
-- [] it must speak to you
+- [X] it must speak to you
 - [] it must do what you command
 
 ## domain requirements -- --
