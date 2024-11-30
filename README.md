@@ -7,10 +7,12 @@
 - [X] it must understand your voice
 - [X] it must speak your language 
 - [X] it must speak to you
+- [X] it must learn
 - [] it must do what you command
 
 ## domain requirements -- --
-- [X] the libraries: speech recognition, PyAudio, pyttsx3, Vosk must be installed
+- [X] the libraries: speech recognition, PyAudio, pyttsx3, Vosk, Numpy, scikit-learn and PyYAML must be installed
+- [X] when running model.py or classifier.py you must create or update the assistant training files
 - [] must pass every test
 
 ## non functional requirements -- --

@@ -1,29 +1,35 @@
+# input = your command
+
 commands:
-  # Hora
+  # Hour
   - commmand:
-    input:  Que horas são?
+    input:  Que horas são
     entity: time
     action: getTime
   - commmand:
-    input:  Me digas horas.
+    input:  Me digas as horas.
     entity: time
     action: getTime
-  # Data
   - commmand:
-    input:  Qual é a data de hoje?
+    input:  Eu quero saber as horas.
+    entity: time
+    action: getTime
+  # Date
+  - commmand:
+    input:  Qual é a data de hoje
     entity: time
     action: getDate
   - commmand:
     input:  Data de hoje.
     entity: time
     action: getDate
-  # Tempo
+  # Weather
   - commmand:
     input:  Previsão do tempo
     entity: weather
     action: getWeather
   - commmand:
-    input:  Como está o clima?
+    input:  Como está o clima
     entity: weather
     action: getWeather
   # Open

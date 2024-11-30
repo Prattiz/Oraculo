@@ -4,6 +4,8 @@ import pyttsx3
 import json
 import core
 
+from nlu.classifier import classify
+
 # Speech Synthesis
 
 engine = pyttsx3.init()
@@ -32,7 +34,11 @@ while True:
 
         text = result['text']
 
-        print(text)
+        entity = None
+        entity = classify(text)
         
-        if text == 'que horas são' or text == 'me diga as horas':
+        print('Text: {} Entity: {}'.format(text, entity))
+        if entity == 'time\getTime':
             speak(core.SystemInfo.get_time())
+
+        

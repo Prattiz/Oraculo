@@ -1,2 +1,5 @@
 venv
 __pycache__
+labels.txt
+label_encoder.pkl
+model.pkl
