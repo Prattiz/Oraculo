@@ -13,8 +13,9 @@
 ## domain requirements -- --
 - [X] the libraries: speech recognition, PyAudio, pyttsx3, Vosk, Numpy, scikit-learn and PyYAML must be installed
 - [X] when running model.py or classifier.py you must create or update the assistant training files
-- [] must pass every test
+- [] should open google and youtube
+- [X] must pass every test
 
 ## non functional requirements -- --
 
-- [] it must not do every command you want to do, only what is scripted (for security reasons)
+- [X] it must not do every command you want to do, only what is scripted (for security reasons)
