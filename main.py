@@ -3,8 +3,11 @@ import pyaudio
 import pyttsx3
 import json
 import core
+import os
 
 from nlu.classifier import classify
+
+
 
 # Speech Synthesis
 
@@ -16,6 +19,23 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+def evaluate(t):
+
+    entity = classify(t)
+        
+    print('Text: {} Entity: {}'.format(t, entity))
+
+    if entity == 'time|getTime':
+        speak(core.SystemInfo.get_time())
+
+    elif entity == 'time|getDate':
+        speak(core.SystemInfo.get_date())
+
+    elif entity == "open|notepad":
+        speak('Abrindo o Bloco de Notas')
+        os.system('notepad.exe')
+        
+    # more comands to make
 
 model = Model('model')
 rec = KaldiRecognizer(model, 16000)
@@ -33,16 +53,10 @@ while True:
         result = json.loads(result)
 
         text = result['text']
-
-        entity = None
-        entity = classify(text)
         
-        print('Text: {} Entity: {}'.format(text, entity))
-
-        if entity == 'time\getTime':
-            speak(core.SystemInfo.get_time())
-
-        elif entity == 'time\getDate':
-            speak(core.SystemInfo.get_date())
+        if text == "":
+            speak("Desculpe, você falou algo?")
+        else:
+            evaluate(text)
 
         

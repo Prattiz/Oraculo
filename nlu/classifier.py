@@ -11,7 +11,7 @@ inputs, outputs = [], []
 for command in data['commands']:
     inputs.append(command['input'].lower().strip())
     action = command['action'] if command['action'] else ""
-    outputs.append(f"{command['entity']}\\{action.strip()}")
+    outputs.append(f"{command['entity']}|{action.strip()}")
 
 # Definir comprimento máximo da sequência em bytes
 max_seq = max(len(bytes(x.encode('utf-8'))) for x in inputs)

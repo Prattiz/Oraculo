@@ -1,5 +1,4 @@
 import yaml
-import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -14,7 +13,7 @@ inputs, outputs = [], []
 # Preparando os inputs e outputs
 for command in data['commands']:
     inputs.append(command['input'].lower())
-    outputs.append(f"{command['entity']}\\{command['action']}" if command['action'] else f"{command['entity']}\\{command['entity']}")
+    outputs.append(f"{command['entity']}|{command['action']}" if command['action'] else f"{command['entity']}\\{command['entity']}")
 
 # Processar o texto e rótulos
 vectorizer = CountVectorizer(analyzer='char')

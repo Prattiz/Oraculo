@@ -16,11 +16,15 @@ commands:
     action: getTime
   # Date
   - commmand:
-    input:  Qual é a data de hoje
+    input:  Qual é O dia de hoje
     entity: time
     action: getDate
   - commmand:
-    input:  Data de hoje.
+    input:  Data atual.
+    entity: time
+    action: getDate
+    - commmand:
+    input:  Que dia é hoje
     entity: time
     action: getDate
   # Weather
@@ -34,10 +38,30 @@ commands:
     action: getWeather
   # Open
   - commmand:
-    input:  Abrir google
+    input:  Abrir o Chrome
     entity: open
-    action: 
+    action: chrome
   - commmand:
-    input:  Abra youtube
+    input:  Abra o Chrome
     entity: open
-    action: 
+    action: chrome
+  - commmand:
+    input:  Chrome
+    entity: open
+    action: chrome
+  - commmand:
+    input:  Abrir o Google Chrome
+    entity: open
+    action: chrome
+  - commmand:
+    input:  Abra o bloco de notas
+    entity: open
+    action: notepad
+  - commmand:
+    input:  bloco de notas
+    entity: open
+    action: notepad
+  - commmand:
+    input:  Abrir o bloco de notas
+    entity: open
+    action: notepad
